@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css?family=Helvetica+Neue");
+
+.App__header {
+  text-align: center;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.4em;
+  width: 100%;
+  font-size: 120px;
+  font-weight: 100;
+  text-align: center;
+  color: rgba(175, 47, 47, 0.15);
+}
