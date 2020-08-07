@@ -1,25 +1,24 @@
 import React from "react";
-import "../css/AddToDo.css";
+import { connect } from "react-redux";
+import { addToDo } from "../actions/index";
 
-const AddToDo = ({ dispatch }) => {
-  let input;
-  const handleSubmit = (event) => {
-    // event.preventDefault();
-    // if (!input.value.trim()) {
-    //   return;
-    // }
-    // dispatch(addTodo(input.value));
-    // input.value = "";
+const AddNewToDo = ({ dispatch }) => {
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      dispatch(addToDo(event.target.value.trim()));
+      event.target.value = "";
+    }
   };
 
   return (
-    <div class="new-todo">
+    <header className="header">
+      <h1>todos</h1>
       <input
-        ref={(node) => (input = node)}
-        class="new-todo__input"
+        className="new-todo"
         placeholder="What needs to be done?"
+        onKeyDown={handleKeyDown}
       />
-    </div>
+    </header>
   );
 };
-export default AddToDo;
+export default connect()(AddNewToDo);

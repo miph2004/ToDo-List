@@ -1,14 +1,15 @@
 import React from "react";
 import "../css/App.css";
-import AddToDo from "../containers/AddToDo";
-import VisibleTodoList from "./VisibleTodoList";
+import AddNewToDo from "../containers/addToDo";
+import VisibleToDoList from "../containers/visibleToDoList";
+import Footer from "./Footer";
 
 function App() {
   return (
-    <div className="App">
-      <h1 className="App__header">todos</h1>
-      <AddToDo />
-      {/* <VisibleTodoList /> */}
+    <div className="todoapp">
+      <AddNewToDo />
+      <VisibleToDoList />
+      <Footer />
     </div>
   );
 }
